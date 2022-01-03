@@ -4,19 +4,20 @@
     "description": "High-quality icon library",
     "license": "ISC",
     "scripts": {
-        "generate-metadata": "node ./bin/generate.js",
+        "generate-metadata": "node ./bin/generate.mjs",
         "build": "webpack --mode=production",
         "build:watch": "webpack --mode=development --watch",
-        "prettier:format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,json}' "
+        "prettier:format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,json}' ",
+        "update-git": "git add . && git commit -m $npm_package_version && git push"
     },
     "dependencies": {
-        "@digibearapp/digibear-common-types": "^1.0.5",
-        "@digibearapp/digibear-icons-react": "^1.0.3",
-        "@digibearapp/digibear-svg-icons": "^1.0.4",
+        "@digibearapp/digibear-common-types": "^1.0.6",
+        "@digibearapp/digibear-icons-react": "^1.0.4",
+        "@digibearapp/digibear-svg-icons": "^1.0.5",
         "fuse.js": "^6.5.3",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "react-virtuoso": "^2.3.4",
+        "react-virtuoso": "^2.4.0",
         "styled-components": "^5.3.3",
         "use-debounce": "^7.0.1"
     },

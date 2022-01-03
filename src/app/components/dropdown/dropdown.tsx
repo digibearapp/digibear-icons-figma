@@ -1,13 +1,13 @@
 import * as React from 'react';
 import styled from 'styled-components';
 import {DbIcon, DbIconName, DbIconStyle} from '@digibearapp/digibear-icons-react';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 const StyledDropdownWrapper = styled.div`
     position: relative;
     margin-right: 8px;
     user-select: none;
-    width: 150px;
+    width: ${({width}) => width};
 `;
 const StyledDropdown = styled.div`
     display: flex;
@@ -77,13 +77,14 @@ export interface DropdownItemProps<T> {
 }
 
 export interface DropdownProps<T> {
+    width: number | string;
     selectedItem: T;
     items: DropdownItemProps<T>[];
     onSelectedItem: (selectedItem: T) => void;
 }
 
 const Dropdown = <T extends unknown>(props: DropdownProps<T>) => {
-    const {items, selectedItem, onSelectedItem} = props;
+    const {items, selectedItem, onSelectedItem, width} = props;
     const [showItems, setShowItems] = useState(false);
 
     const toggleShowItems = () => {
@@ -110,7 +111,7 @@ const Dropdown = <T extends unknown>(props: DropdownProps<T>) => {
     };
 
     return (
-        <StyledDropdownWrapper onClick={toggleShowItems}>
+        <StyledDropdownWrapper onClick={toggleShowItems} width={width}>
             {buildDropdownButton()}
             {showItems && (
                 <StyledDropdownItemsWrapper>

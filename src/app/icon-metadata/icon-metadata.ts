@@ -1,7 +1,7 @@
-import { DbIconDefinition, DbIconName } from "@digibearapp/digibear-common-types";
+import {DbIconDefinition} from '@digibearapp/digibear-common-types';
 
 export interface IconMetadataCollection {
-    [key: string] : IconMetadata;
+    [key: string]: IconMetadata;
 }
 
 export interface IconMetadata {

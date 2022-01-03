@@ -48,7 +48,7 @@ const MainSection = styled.div`
 
 const App = ({}) => {
     const [iconStyle, setIconStyle] = useState<DbIconStyle>('duotone');
-    const [iconCategory, setIconCategory] = useState<IconCategory>('All');
+    const [iconCategory] = useState<IconCategory>('All');
     const [searchQuery, setSearchQuery] = useState('');
     const categorizedIcons = useMemo(() => {
         return iconCategory === 'All'
@@ -103,6 +103,7 @@ const App = ({}) => {
                         items={iconStyleDropdownItems}
                         selectedItem={iconStyle}
                         onSelectedItem={setIconStyle}
+                        width="160px"
                     />
                     <FloatingSearchBar onChange={(e) => debouncedSearchQuery(e)} />
                 </Header>
