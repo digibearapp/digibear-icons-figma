@@ -11,9 +11,10 @@
         "update-git": "git add . && git commit -m $npm_package_version && git push"
     },
     "dependencies": {
-        "@digibearapp/digibear-common-types": "^1.0.6",
-        "@digibearapp/digibear-icons-react": "^1.0.4",
-        "@digibearapp/digibear-svg-icons": "^1.0.5",
+        "@digibearapp/digibear-common-types": "^1.0.7",
+        "@digibearapp/digibear-icons-react": "^1.0.5",
+        "@digibearapp/digibear-svg-icons": "^1.0.6",
+        "@terascope/fetch-github-release": "^0.8.7",
         "fuse.js": "^6.5.3",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
